@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import '../Signup.css'; // Add this line if you put styles in a separate file
 
 function Signup() {
   const navigate = useNavigate();
@@ -18,40 +19,45 @@ function Signup() {
       navigate('/login');
     } catch (error) {
       alert('Signup failed. Try different username or email.');
-      console.error(error.response.data);
+      console.error(error.response?.data || error.message);
     }
   };
 
   return (
-    <div>
-      <h1>Signup Page</h1>
-      <form onSubmit={handleSignup}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        /><br />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        /><br />
-        <button type="submit">Signup</button>
-      </form>
+    <div className="signup-page">
+      <div className="signup-box">
+        <h1>Sign Up</h1>
+        <form onSubmit={handleSignup}>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <p className="signup-footer">
+          Already have an account? <Link to="/login">Log in</Link>
+        </p>
+      </div>
     </div>
   );
 }
