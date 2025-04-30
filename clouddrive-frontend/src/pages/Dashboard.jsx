@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Api from '../services/Api'; // Corrected: Import Api instance, not axios
+import '../Dashboard.css'
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -80,32 +81,39 @@ function Dashboard() {
   };
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <button onClick={handleLogout}>Logout</button>
-      <hr />
+    <div className="dashboard-page">
+      <div className="dashboard-header">
+        <h1>CloudDrive Dashboard</h1>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
 
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <div className="upload-section">
+        <input type="file" onChange={handleFileChange} />
+        <button onClick={handleUpload}>Upload</button>
+      </div>
 
       <h2>My Files</h2>
+
       {files.length === 0 ? (
-        <p>No files uploaded yet.</p>
+        <p className="no-files">No files uploaded yet.</p>
       ) : (
-        <ul>
+        <div className="file-list">
           {files.map((filePath) => {
-            const filename = filePath.split('/').pop(); // Get filename only
+            const filename = filePath.split('/').pop();
             return (
-              <li key={filePath}>
-                {filename}
-                <button onClick={() => handleDownload(filename)}>Download</button>
-                <button onClick={() => handleDelete(filename)}>Delete</button>
-              </li>
+              <div className="file-card" key={filePath}>
+                <p className="filename">{filename}</p>
+                <div className="file-actions">
+                  <button onClick={() => handleDownload(filename)}>Download</button>
+                  <button onClick={() => handleDelete(filename)}>Delete</button>
+                </div>
+              </div>
             );
           })}
-        </ul>
+        </div>
       )}
     </div>
+
   );
 }
 
