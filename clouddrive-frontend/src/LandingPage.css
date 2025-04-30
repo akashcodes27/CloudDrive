@@ -1,0 +1,86 @@
+/* LandingPage.css */
+
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark blue gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+    width: 100%;
+  }
+  
+  .landing-container {
+  
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  
+  .landing-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+  }
+  
+  .highlight {
+    color: #00d4ff; /* neon-cyan for CloudDrive */
+  }
+  
+  .landing-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #d0d0d0;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  
+  .landing-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .login-btn {
+    background-color: #00b4d8;
+    color: #ffffff;
+  }
+  
+  .login-btn:hover {
+    background-color: #0077b6;
+    transform: translateY(-3px);
+  }
+  
+  .signup-btn {
+    background-color: #38b000;
+    color: #ffffff;
+  }
+  
+  .signup-btn:hover {
+    background-color: #007f5f;
+    transform: translateY(-3px);
+  }
+  
+  .landing-footer {
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    margin-top: auto;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,24 @@
+# Python
+env/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django static/media (if not needed)
+*.log
+db.sqlite3
+
+# Node.js
+node_modules/
+npm-debug.log
+dist/
+build/
+
+# Environment Variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
