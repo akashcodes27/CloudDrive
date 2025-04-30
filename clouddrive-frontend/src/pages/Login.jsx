@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Api from '../services/Api'; // Corrected import - using your capital 'A'
+import '../Login.css'
 
 function Login() {
   const navigate = useNavigate();
@@ -29,29 +30,34 @@ function Login() {
   };
 
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={handleLogin}>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        /><br />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        /><br />
-        <button type="submit">Login</button>
-      </form>
-      <p>Don't have an account? <Link to="/signup">Sign up here</Link></p>
-    </div>
+    <div className="login-page">
+  <div className="login-box">
+    <h1>Login</h1>
+    <form onSubmit={handleLogin}>
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        value={formData.username}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={formData.password}
+        onChange={handleChange}
+        required
+      />
+      <button type="submit">Login</button>
+    </form>
+    <p className="login-footer">
+      Don't have an account? <Link to="/signup">Sign up here</Link>
+    </p>
+  </div>
+</div>
+
   );
 }
 
