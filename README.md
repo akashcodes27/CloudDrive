@@ -16,8 +16,8 @@ CloudDrive is a full-stack cloud storage solution that allows users to securely 
 
 
 <p float="left">
-  <img src="./screenshots/login.png" width="300" />
-  <img src="./screenshots/upload.png" width="300" />
+  <img src="./screenshots/login.png" width="600" />
+  <img src="./screenshots/signup.png" width="600" />
 </p>
 
 
