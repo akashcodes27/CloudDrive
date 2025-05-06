@@ -2,6 +2,20 @@
 
 CloudDrive is a full-stack cloud storage solution that allows users to securely **upload**, **store**, **access**, and **manage files** in the cloud — from anywhere, on any device. Built with performance, simplicity, and user experience in mind, CloudDrive mimics essential features of services like Google Drive or Dropbox.
 
+### 🔐 Landing Page
+![Landing Page](./screenshots/login.png)
+
+### 🔐 Login Page
+![Login Screenshot](./screenshots/login.png)
+
+### 🔐 Signup Page
+![Signup Screenshot](./screenshots/Signup.png)
+
+### 📁 File Upload Interface
+![Upload Screenshot](./screenshots/upload.png)
+
+
+
 ---
 
 ## 🔍 Overview
