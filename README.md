@@ -5,18 +5,15 @@ CloudDrive is a full-stack cloud storage solution that allows users to securely 
 ### 🔐 Landing Page
 ![Landing Page](./screenshots/LandingPage.png)
 
-### 🔐 Login Page
-![Login Screenshot](./screenshots/login.png)
 
-### 🔐 Signup Page
-![Signup Screenshot](./screenshots/signup.png)
-
-### 📁 File Upload Interface
-![Upload Screenshot](./screenshots/upload.png)
 
 
 <p float="left">
+  ### 🔐 Landing Page
+  <img src="./screenshots/LandingPage.png" width="600" />
+  ### 🔐 Login Page
   <img src="./screenshots/login.png" width="600" />
+  ### 🔐 Signup Page
   <img src="./screenshots/signup.png" width="600" />
 </p>
 
