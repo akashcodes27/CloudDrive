@@ -14,7 +14,8 @@ CloudDrive is a full-stack cloud storage solution that allows users to securely 
 ![Landing Page](./screenshots/awsS3.png) 
 ### 🔐 AWS Page
 ![Landing Page](./screenshots/awsEC2.png)
-
+### 🔐 AWS Page
+![Landing Page](./screenshots/awsIAM.png)
 
 ---
 
